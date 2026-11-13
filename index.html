@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --bg: #f8fafc;
+            --text: #334155;
+            --white: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* Header */
+        header { background: var(--white); display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 5%; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--primary); }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.95rem; }
+        nav a:hover { color: var(--accent); }
+
+        /* Main Content */
+        main { max-width: 1100px; margin: 0 auto; padding: 2rem 5%; }
+        section { padding: 4rem 0; border-bottom: 1px solid #e2e8f0; }
+        
+        /* Hero */
+        .hero { text-align: center; padding: 6rem 0; }
+        .hero h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+        .hero p { max-width: 700px; margin: 0 auto 2rem auto; color: #64748b; }
+        .btn { display: inline-block; background: var(--accent); color: var(--white); padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 500; }
+        .btn:hover { opacity: 0.9; }
+
+        /* Headings */
+        h2 { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; }
+
+        /* Projects Grid */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.2s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-4px); }
+        .card img { width: 100%; height: 180px; object-fit: cover; background: #cbd5e1; }
+        .card-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .card p { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; }
+        .card-link { color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+        .skill-tag { background: var(--white); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid #cbd5e1; font-weight: 500; }
+
+        /* Footer */
+        footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #64748b; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            nav { display: none; } /* Simple mobile hiding for template */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">⚙️ Your Name</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <p>Mechanical Engineering Professional</p>
+            <h1>Your Name, RME</h1>
+            <p>Bridging theoretical concepts and functional implementation through CAD modeling, thermal analysis, and efficient system design.</p>
+            <a href="#projects" class="btn">Explore My Portfolio →</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I specialize in mechanical design, thermal systems, HVAC engineering, and industrial maintenance. I focus on turning technical challenges into efficient, data-driven solutions.</p>
+        </section>
+
+        <!-- Capstone / Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p>Major design builds and engineering analysis.</p>
+            
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <a href="#" class="card">
+                    <img src="project1.png" alt="Project Thumbnail">
+                    <div class="card-content">
+                        <div>
+                            <h3>Hybrid Thermal Drying System</h3>
+                            <p>Designed a high-efficiency agricultural drying system using renewable energy sources.</p>
+                        </div>
+                        <span class="card-link">View Project →</span>
+                    </div>
+                </a>
+
+                <!-- Project Card 2 -->
+                <a href="#" class="card">
+                    <img src="project2.png" alt="Project Thumbnail">
+                    <div class="card-content">
+                        <div>
+                            <h3>HVAC Building Design</h3>
+                            <p>Comprehensive ductwork and piping layout for a multi-storey commercial structure.</p>
+                        </div>
+                        <span class="card-link">View Project →</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-tag">SolidWorks</div>
+                <div class="skill-tag">AutoCAD</div>
+                <div class="skill-tag">ANSYS CFD</div>
+                <div class="skill-tag">HVAC Design</div>
+                <div class="skill-tag">BOM Costing</div>
+                <div class="skill-tag">Project Management</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p>Open for professional opportunities and technical collaborations.</p>
+            <p style="margin-top: 1rem;">📧 <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
